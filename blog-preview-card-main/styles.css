@@ -44,6 +44,7 @@ body{
     overflow: hidden;
     width: 24rem;
     padding: var(--spacing-300);
+    border: 1px solid black;
 
     &:hover{
         cursor: pointer;
