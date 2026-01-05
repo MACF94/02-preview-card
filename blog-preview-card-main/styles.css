@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+
+    --color-yellow: hsl(47, 88%, 63%);
+    --color-white:hsl(0, 0%, 100%);
+    --color-gray-500:hsl(0, 0%, 42%);
+    --color-gray-900: hsl(0, 0%, 7%);
+
+    --text-size1: 1.5rem;
+    --text-size2: 1rem;
+    --text-size3: 0.875rem;
+    --spacing-300: 1.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-100: 0.5rem;
+    --spacing-50: 0.25rem;
+
+    --box-shadow: 8px 8px 0 0 black;
+
+}
+
+html{
+    font-size: 16px;
+    @media screen and (max-width: 374px){
+        font-size: 12px;
+    }
+}
+
+body{
+    background-color: var(--color-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.card{
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    width: 24rem;
+    padding: var(--spacing-300);
+
+    &:hover{
+        cursor: pointer;
+
+        h1{
+            color: var(--color-yellow);
+        }
+    }
+}
+
+.card-image img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.card-content{
+    margin-top: var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+
+    p{
+        font-size: var(--text-size2);
+        color: var(--color-gray-500);
+        line-height: 1.5;
+    }
+
+    h1{
+        font-size: var(--text-size1);
+        color: var(--color-gray-900);
+        line-height: 1.2;
+        cursor: pointer;
+    }
+}
+
+.card-badge{
+    background-color: var(--color-yellow);
+    color: var(--color-gray-900);
+    font-size: var(--text-size3);
+    font-weight: bold;
+    padding: var(--spacing-50) var(--spacing-150);
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.card-footer{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150);
+    margin-top: var(--spacing-300);
+
+    img{
+       width: 32px;
+       height: 32px; 
+    }
+
+    span{
+        font-size: var(--text-size3);
+        color: var(--color-gray-900);
+        font-weight: bold;
+    }
+}
